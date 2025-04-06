@@ -21,6 +21,7 @@ function App() {
       const localKey = `NASA-${today}`
       if(localStorage.getItem(localKey)){
         setData(JSON.parse(localStorage.getItem(localKey)))
+        // console.log("fetching from local")
         return
       }
       localStorage.clear()
@@ -30,7 +31,8 @@ function App() {
         const apiData = await response.json()
         localStorage.setItem(localKey,JSON.stringify(apiData))
         setData(apiData)
-        console.log(apiData);
+        // console.log("fetching from api");
+        
 
       } 
       catch(error){
