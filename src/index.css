@@ -149,14 +149,14 @@ footer button:hover {
   font-weight: 200;
 }
 
-.loadingState {
+.loading{
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
 }
 
-.loadingState i {
+.loading i {
   opacity: 0.2;
   font-size: 3rem;
   animation: spin 1s linear infinite;
