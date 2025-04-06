@@ -1,16 +1,23 @@
+import { useState } from "react"
 import Footer from "./components/Footer"
 import Main from "./components/Main"
 import SideBar from "./components/SideBar"
 
 function App() {
-const []
+const [showModel,setShowModel]=useState(false);
+
+function handleToggleModel (){
+  setShowModel(!showModel)
+}
+
   return (
     <>
      <Main />
-    <SideBar>
-
-    </SideBar>
-     <Footer />
+    {showModel && ( 
+      <SideBar handleToggleModel={handleToggleModel} />
+   )
+    }
+     <Footer handleToggleModel={handleToggleModel} />
     </>
   )
 }

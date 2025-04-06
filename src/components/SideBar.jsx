@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function SideBar() {
+export default function SideBar(props) {
+  const { handleToggleModel} = props
+
   return (
     <div className='sidebar'>
       <div className="bgOverlay"></div>
@@ -14,7 +16,9 @@ export default function SideBar() {
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia dolor repudiandae aliquam. Nisi exercitationem, minima eaque dolorum doloremque earum sed repellendus a ducimus unde magnam in cum inventore omnis esse!</p>
         
         </div>
-        <button> 
+        <button onClick={()=>{
+          handleToggleModel()
+        }}> 
         <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
